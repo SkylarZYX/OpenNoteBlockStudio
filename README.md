@@ -1,3 +1,6 @@
+# Modified fork!!
+this fork adds an option to play music for other entities for datapacks.
+
 ![Open Note Block Studio logo](https://i.imgur.com/AMd0NBh.png)
 
 <p align="center">
