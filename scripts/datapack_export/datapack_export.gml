@@ -74,8 +74,10 @@ function datapack_export() {
 		dat_writefile(inputString, functiondir + "load.mcfunction")
 	
 		//tick.mcfunction
-		inputString = "execute as @a[tag=" + tag + "] run scoreboard players operation @s " + objective + " += speed " + objective + br
-		if(o.dat_enableradius) inputString += "execute as @a[tag=" + tag + "] run function " + functionpath + "tree/" + rootfunction
+		if(o.dat_entitymusic) inputString = "execute as @e[tag=" + tag + "] run scoreboard players operation @s " + objective + " += speed " + objective + br
+		else inputString = "execute as @a[tag=" + tag + "] run scoreboard players operation @s " + objective + " += speed " + objective + br
+		if(o.dat_enableradius) && (!o.dat_entitymusic) inputString += "execute as @a[tag=" + tag + "] run function " + functionpath + "tree/" + rootfunction
+		if(o.dat_enableradius) && (o.dat_entitymusic) inputString += "execute as @e[tag=" + tag + "] run function " + functionpath + "tree/" + rootfunction
 		else inputString += "execute as @a[tag=" + tag + "] at @s run function " + functionpath + "tree/" + rootfunction
 		dat_writefile(inputString, functiondir + "tick.mcfunction")
 	

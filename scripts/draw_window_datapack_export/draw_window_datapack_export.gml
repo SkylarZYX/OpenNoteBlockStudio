@@ -138,6 +138,9 @@ function draw_window_datapack_export() {
 		//Export as ZIP
 		if (draw_checkbox(x1 + 192, y1 + 334, dat_usezip, "Export as ZIP", "Whether to export the data pack as a ZIP file."+br+"If unchecked, it will be saved as a folder instead.", false, true)) dat_usezip=!dat_usezip
 
+		//Enable noteblock music from entities
+		if (draw_checkbox(x1 + 192, y1 + 362, dat_entitymusic, "Enable entity music", "Enables playback music from other entities. (works with nearby listening enabled)", false, true)) dat_entitymusic=!dat_entitymusic
+
 		//Locked layers
 		if (draw_checkbox(x1 + 362, y1 + 213, dat_includelocked, "Include locked layers", "Whether to include locked layers in the data pack.", false, true)) dat_includelocked=!dat_includelocked
 
@@ -272,6 +275,9 @@ function draw_window_datapack_export() {
 
 		//Export as ZIP
 		if (draw_checkbox(x1 + 192, y1 + 334, dat_usezip, "导出为 ZIP", "是否导出为 ZIP 格式的文件。"+br+"如关闭，将导出为文件夹。", false, true)) dat_usezip=!dat_usezip
+
+		//Enable noteblock music from entities
+		if (draw_checkbox(x1 + 192, y1 + 362, dat_entitymusic, "启用实体音乐", "可播放其他实体的音乐。(在启用附近收听功能时有效）", false, true)) dat_entitymusic=!dat_entitymusic
 
 		//Locked layers
 		if (draw_checkbox(x1 + 362, y1 + 213, dat_includelocked, "包括已静音的层", "是否在数据包内包括已静音的层。", false, true)) dat_includelocked=!dat_includelocked

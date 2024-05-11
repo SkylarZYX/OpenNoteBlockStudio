@@ -14,6 +14,7 @@ function dat_reset(argument0) {
 	dat_includelocked = 0
 	dat_includeoutofrange = 0
 	dat_enableradius = 0
+	dat_entitymusic = 0
 	dat_radius = 16
 	dat_radiusvalue = 0
 	dat_enablelooping = 0
